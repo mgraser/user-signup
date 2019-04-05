@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+<h1>Signup</h1>
+<form action="/welcome" method="post">
+    <label>Username:  <input type="text" name="username"/></label>
+    <span class="error">{{ nameerror }}</span>
+    <br>
+    <label>Password:  <input type="text" name="pwd"/></label>
+    <span class="error">{{ pwderror}} </span>
+    <br>
+    <label>Verify Password:  <input type="text" name="verify_pwd"/></label>
+    <span class="error">{{ verify_pwd_error }}</span>
+    <br>
+    <label>Email:  <input type="text" name="email"/></label>
+    <span class="error"></span>
+    <br>
+    <input type="submit" />
+</form>
+</body>
+</html>
