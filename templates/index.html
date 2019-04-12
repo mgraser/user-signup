@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
 
 </head>
 <body>
 <h1>Signup</h1>
 <form action="/welcome" method="post">
-    <label>Username:  <input type="text" name="username"/></label>
+    <label>Username:  <input type="text" name="username" value="{{ username }}"/></label>
     <span class="error">{{ nameerror }}</span>
     <br>
-    <label>Password:  <input type="text" name="pwd"/></label>
+    <label>Password:  <input type="password" name="pwd"/></label>
     <span class="error">{{ pwderror}} </span>
     <br>
-    <label>Verify Password:  <input type="text" name="verify_pwd"/></label>
+    <label>Verify Password:  <input type="password" name="verify_pwd"/></label>
     <span class="error">{{ verify_pwd_error }}</span>
     <br>
-    <label>Email:  <input type="text" name="email"/></label>
-    <span class="error"></span>
+    <label>Email:  <input type="text" name="email" value="{{ email }}"/></label>
+    <span class="error">{{ verify_email }}</span>
     <br>
     <input type="submit" />
 </form>
