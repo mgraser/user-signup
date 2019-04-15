@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        .error {
-            color: red;
-        }
-    </style>
-
+    <link href="{{ url_for('static',filename='styles/style.css') }}" type="text/css" rel="stylesheet">
+    <title> User Signup </title>
+        
 </head>
 <body>
-<h1>Signup</h1>
-<form action="/welcome" method="post">
-    <label>Username:  <input type="text" name="username" value="{{ username }}"/></label>
-    <span class="error">{{ nameerror }}</span>
-    <br>
-    <label>Password:  <input type="password" name="pwd"/></label>
-    <span class="error">{{ pwderror}} </span>
-    <br>
-    <label>Verify Password:  <input type="password" name="verify_pwd"/></label>
-    <span class="error">{{ verify_pwd_error }}</span>
-    <br>
-    <label>Email:  <input type="text" name="email" value="{{ email }}"/></label>
-    <span class="error">{{ verify_email }}</span>
-    <br>
-    <input type="submit" />
-</form>
+    <div class="signup-box">
+
+    <h1>Create An Account</h1>
+    <table>
+    <form action="/welcome" method="post">
+        <tr class-"row">
+            <td><label for="username">Username:  </td></label>
+            <td><input type="text" name="username" value="{{ username }}"/></td>
+            <td class="error">{{ nameerror }} </td>
+        </tr>
+        <tr class-"row">
+            <td><label for="pwd">Password:  </label></td>
+            <td><input type="password" name="pwd"/></td>
+            <td class="error">{{ pwderror}} </td>
+        </tr>
+        <tr class-"row">
+            <td><label for="verify_pwd">Verify Password:  </label></td>
+            <td><input type="password" name="verify_pwd"/></td>
+            <td class="error">{{ verify_pwd_error }}</td>
+        </tr>
+        <tr class-"row">
+            <td><label for="email">Email:  </label></td>
+            <td><input type="text" name="email" value="{{ email }}"/></td>
+            <td class="error">{{ verify_email }}</td>
+        </tr>
+        <tr class-"row">
+            <td><input type="submit" value="Sign Up" id="submit" /></td>
+        </tr>
+    </form>
+    </table>
+    </div>
 </body>
 </html>
